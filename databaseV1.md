@@ -38,7 +38,6 @@
 |logo|varchar(255)|||
 |sector_id|number(3)|NOT NULL||
 |address_id|number(3)|NOT NULL||
-|sector_id|number(3)|NOT NULL||
 |description|varchar(3565)|||
 |tagline|varchar(255)|||
 |establishmentYear| number(4)|||
@@ -65,7 +64,7 @@
 |id|number(10)|PK||
 |name| char(225)|NOT NULL||
 
-## job 
+## jobs 
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
@@ -91,7 +90,7 @@
 |name|char(255)|||
 
 
-## region
+## regions
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
@@ -99,78 +98,76 @@
 |name|char(255)|NOT NULL||
 |pin code|number(6)|NOT NULL||
 
-##
+## students 
 
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-
-##
-
-|||||
-|||||
-|||||
-|||||
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10)|PK||
+|user_id||||
+|roll||||
+|branch||||
+|semester||||
+|dob|date|||
+|blood_group||||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
 |||||
 |||||
 |||||
 |||||
 
-##
+## qualifications
 
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10)|||
+|degree_id||||
+|region_id||||
+|year_of_passing||||
+|marks_obtained||||
+|total_marks||||
+|universities_id||||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
 
-##
+## degrees
 
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10)|||
+|name||||
 
-##
+## universities
 
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10)|PK||
+|name||||
 
-##
+## experiences
 
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10)|PK||
+|name||||
+|description||||
+|region_id||||
+|company_id||||
+|salary||||
+|form||||
+|to||||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
 
-##
+## companies
 
-|||||
-|||||
-|||||
-|||||
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10|PK||
+|name|char(65)|NOT NULL||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
+
 |||||
 |||||
 |||||
@@ -178,6 +175,8 @@
 
 ##
 
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
 |||||
 |||||
 |||||
@@ -187,4 +186,133 @@
 |||||
 |||||
 
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+##
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
 
