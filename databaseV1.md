@@ -2,7 +2,7 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id |nuber(14) | PK     ||
+|id |int(14) | PK     ||
 |path | varchar(200)| NOT NULL||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
@@ -11,12 +11,12 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id |number(14) | PK     ||
-|name |char(65)|NOT NULL||
+|id |int(14) | PK     ||
+|name |char(255)|NOT NULL||
 |email|varchar(255)|Unique||
-|phone|number(10)|Unique||
+|phone|int(10)|Unique||
 |password|varchar(255)|NOT NULL||
-|user_type|number(3)|FK user_types||
+|user_type_id|int(3)|FK user_types||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
 
@@ -24,7 +24,7 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number| PK||
+|id|int| PK||
 |name| char(65)|NOT NULL||
 
 
@@ -32,16 +32,16 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(3)|PK||
-|user_id|number(31)|Unique||
+|id|int(3)|PK||
+|user_id|int(31)|Unique||
 |name|char(65)|NOT NULL||
 |logo|varchar(255)|||
-|sector_id|number(3)|NOT NULL||
-|address_id|number(3)|NOT NULL||
+|sector_id|int(3)|NOT NULL||
+|address_id|int(3)|NOT NULL||
 |description|varchar(3565)|||
 |tagline|varchar(255)|||
-|establishmentYear| number(4)|||
-|strength|number(10)|||
+|establishmentYear| int(4)|||
+|strength|int(10)|||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
 
@@ -49,10 +49,10 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|house_no|number(10)|||
-|street|number(10)|||
+|house_no|int(10)|||
+|street|int(10)|||
 |area|varchar(255)|||
-|pincode|number(6)|NOT NULL||
+|pincode|int(6)|NOT NULL||
 |google_map_link|varchar(255)|||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
@@ -61,22 +61,22 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|PK||
+|id|int(10)|PK||
 |name| char(225)|NOT NULL||
 
 ## jobs 
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|PK||
-|user_id|number(10|NOT NULL|
+|id|int(10)|PK||
+|user_id|int(10|NOT NULL|
 |title|char(1023)|NOT NULL||
-|job_type_id|number(10)|NOT NULL||
+|job_type_id|int(10)|NOT NULL||
 |description|varchar(3565)|||
-|min_salary|number(10)|||
-|max_salary|number(10)|||
-|opening|number(10)|||
-|region_id|number(10)|||
+|min_salary|int(10)|||
+|max_salary|int(10)|||
+|opening|int(10)|||
+|region_id|int(10)|||
 |notice_period|nubmer(10)|||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
@@ -86,7 +86,7 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|PK||
+|id|int(10)|PK||
 |name|char(255)|||
 
 
@@ -94,16 +94,16 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|PK||
+|id|int(10)|PK||
 |name|char(255)|NOT NULL||
-|pincode|number(6)|NOT NULL||
+|pincode|int(6)|NOT NULL||
 
 ## students 
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|PK||
-|user_id|number(16)|NOT NULL||
+|id|int(10)|PK||
+|user_id|int(16)|NOT NULL||
 |roll|varchar(16|||
 |branch||||
 |semester||||
@@ -117,7 +117,7 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|||
+|id|int(10)|||
 |degree_id||||
 |region_id||||
 |year_of_passing||||
@@ -131,21 +131,21 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|||
+|id|int(10)|||
 |name||||
 
 ## universities
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|PK||
+|id|int(10)|PK||
 |name||||
 
 ## experiences
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10)|PK||
+|id|int(10)|PK||
 |name||||
 |description||||
 |region_id||||
@@ -160,7 +160,7 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|number(10|PK||
+|id|int(10|PK||
 |name|char(65)|NOT NULL||
 
 ##
