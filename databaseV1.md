@@ -4,8 +4,8 @@
 |:----:| :----:| :----:| :----:| 
 |id |nuber(14) | PK     ||
 |path | varchar(200)| NOT NULL||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 
 ## users
 
@@ -17,8 +17,8 @@
 |phone|number(10)|Unique||
 |password|varchar(255)|NOT NULL||
 |user_type|number(3)|FK user_types||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 
 ## user_types
 
@@ -42,8 +42,8 @@
 |tagline|varchar(255)|||
 |establishmentYear| number(4)|||
 |strength|number(10)|||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 
 ## addresses
 
@@ -54,8 +54,8 @@
 |area|varchar(255)|||
 |pincode|number(6)|NOT NULL||
 |google_map_link|varchar(255)|||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 
 ## sectors
 
@@ -73,13 +73,13 @@
 |title|char(1023)|NOT NULL||
 |job_type_id|number(10)|NOT NULL||
 |description|varchar(3565)|||
-|min salary|number(10)|||
-|max salary|number(10)|||
+|min_salary|number(10)|||
+|max_salary|number(10)|||
 |opening|number(10)|||
 |region_id|number(10)|||
 |notice_period|nubmer(10)|||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 
 
 ## job_types
@@ -96,24 +96,21 @@
 |:----:| :----:| :----:| :----:| 
 |id|number(10)|PK||
 |name|char(255)|NOT NULL||
-|pin code|number(6)|NOT NULL||
+|pincode|number(6)|NOT NULL||
 
 ## students 
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
 |id|number(10)|PK||
-|user_id||||
-|roll||||
+|user_id|number(16)|NOT NULL||
+|roll|varchar(16|||
 |branch||||
 |semester||||
 |dob|date|||
 |blood_group||||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
-|||||
-|||||
-|||||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 |||||
 
 ## qualifications
@@ -127,8 +124,8 @@
 |marks_obtained||||
 |total_marks||||
 |universities_id||||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 
 ## degrees
 
@@ -154,10 +151,10 @@
 |region_id||||
 |company_id||||
 |salary||||
-|form||||
+|from||||
 |to||||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
+|created_at|timestamp| default=current timeStamp||
+|updated_at|timestamp|onUpdate=current timestamp||
 
 ## companies
 
@@ -165,13 +162,6 @@
 |:----:| :----:| :----:| :----:| 
 |id|number(10|PK||
 |name|char(65)|NOT NULL||
-|create_at|timestamp| default=current timeStamp||
-|update_at|timestamp|onUpdate=current timestamp||
-
-|||||
-|||||
-|||||
-|||||
 
 ##
 
