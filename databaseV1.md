@@ -104,27 +104,26 @@
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
 |id|int(10)|PK||
-|user_id|int(16)|NOT NULL||
-|roll|varchar(16|||
-|branch||||
-|semester||||
+|user_id|int(31)|NOT NULL||
+|roll|varchar(31|NOT NULL||
+|branch|varchar(255)|NOT NULL||
+|semester|varchar(31)|NOT NULL
 |dob|date|||
-|blood_group||||
+|blood_group|varchar(31)|||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
-|||||
 
 ## qualifications
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|int(10)|||
-|degree_id||||
-|region_id||||
-|year_of_passing||||
-|marks_obtained||||
-|total_marks||||
-|universities_id||||
+|id|int(10)|pk||
+|degree_id|int(10)|NOT NULL||
+|region_id|int(10)|||
+|year_of_passing|int(4)|NOT NULL||
+|marks_obtained|int(3)|NOT NULL||
+|total_marks|int(3)|NOT NULL||
+|universities_id|int(10)|NOT NULL||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
 
@@ -132,28 +131,24 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|int(10)|||
-|name||||
+|id|int(10)|PK||
+|name|varchar(225)|NOT NULL||
 
 ## universities
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
 |id|int(10)|PK||
-|name||||
+|name|varchar(225)|NOT NULL||
 
 ## experiences
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
 |id|int(10)|PK||
-|name||||
-|description||||
-|region_id||||
-|company_id||||
-|salary||||
-|from||||
-|to||||
+|name|char(255)|NOT NULL||
+|description|varchar(3565)|||
+|region_id|int(10)|NOT NULL||
 |created_at|timestamp| default=current timeStamp||
 |updated_at|timestamp|onUpdate=current timestamp||
 
@@ -161,7 +156,7 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id|int(10|PK||
+|id|int(10)|PK||
 |name|char(65)|NOT NULL||
 
 ##
