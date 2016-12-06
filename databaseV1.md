@@ -4,8 +4,8 @@
 |:----:| :----:| :----:| :----:| 
 |id |nuber(14) | PK     ||
 |path | varchar(200)| NOT NULL||
-|timestamp create|timestamp| default=current timeStamp||
-|timestamp update|timestamp|onUpdate=current timestamp||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
 
 ## users
 
@@ -17,8 +17,8 @@
 |phone|number(10)|Unique||
 |password|varchar(255)|NOT NULL||
 |user_type|number(3)|FK user_types||
-|timestamp create|timestamp| default=current timeStamp||
-|timestamp update|timestamp|onUpdate=current timestamp||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
 
 ## user_types
 
@@ -28,7 +28,7 @@
 |name| char(65)|NOT NULL||
 
 
-## company profiles
+## company_profiles
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
@@ -41,12 +41,12 @@
 |sector_id|number(3)|NOT NULL||
 |description|varchar(3565)|||
 |tagline|varchar(255)|||
-|stablishmentYear| number(4)|||
+|establishmentYear| number(4)|||
 |strength|number(10)|||
-|timestamp create|timestamp| default=current timeStamp||
-|timestamp update|timestamp|onUpdate=current timestamp||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
 
-## address
+## addresses
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
@@ -55,32 +55,48 @@
 |area|varchar(255)|||
 |pincode|number(6)|NOT NULL||
 |google_map_link|varchar(255)|||
-|timestamp create|timestamp| default=current timeStamp||
-|timestamp update|timestamp|onUpdate=current timestamp||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
 
-## sector 
+## sectors
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|id||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+|id|number(10)|PK||
+|name| char(225)|NOT NULL||
 
 ## job 
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+|id|number(10)|PK||
+|user_id|number(10|NOT NULL|
+|title|char(1023)|NOT NULL||
+|job_type_id|number(10)|NOT NULL||
+|description|varchar(3565)|||
+|min salary|number(10)|||
+|max salary|number(10)|||
+|opening|number(10)|||
+|region_id|number(10)|||
+|notice_period|nubmer(10)|||
+|create_at|timestamp| default=current timeStamp||
+|update_at|timestamp|onUpdate=current timestamp||
+
+
+## job_types
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10)|PK||
+|name|char(255)|||
+
+
+## region
+
+|Field | Type | Constraints | Comments |
+|:----:| :----:| :----:| :----:| 
+|id|number(10)|PK||
+|name|char(255)|NOT NULL||
+|pin code|number(6)|NOT NULL||
+
 
