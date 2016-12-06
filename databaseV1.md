@@ -49,6 +49,7 @@
 
 |Field | Type | Constraints | Comments |
 |:----:| :----:| :----:| :----:| 
+|id|int(3)|PK||
 |house_no|int(10)|||
 |street|int(10)|||
 |area|varchar(255)|||
