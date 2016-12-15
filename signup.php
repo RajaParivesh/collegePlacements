@@ -1,6 +1,8 @@
 <?php 
-		require 'config/database.php';	
-	?>
+	require 'includes/header.php';
+	require ROOT.'config/database.php';	
+	require ROOT.'lib/dropdown.php';
+?>
 
 
 	<form action="signup.php" method="POST">
@@ -21,20 +23,10 @@
 
 			
 			<label for="user_type_id"> User Type</label>
-			<select name="user_type_id" value=""  required>
-				<option value="">---</option>
 				
 					<?php 				 					
-						$result = mysqli_query($conn,"SELECT name,id FROM users_types") or die(mysqli_error($conn));
-						while ($row = mysqli_fetch_object($result)) {
-						    // echo $row->user_id;
-							$id=$row->id;
-							echo '<option value='.$id.'>';	    
-						    echo $row->name;
-						    
-						    echo '</option>';
-						    // print_r($row);
-						}
+						$data = mysqli_query($conn,"SELECT name,id FROM users_types") or die(mysqli_error($conn));
+						dropdown($data,'user_type_id');
 				    ?>		 	
 			</select><br><br>
 			<input type="submit" value="Sign Up"><br><br>
