@@ -46,25 +46,28 @@
 							$result = mysqli_query($conn,$sql) or die(mysqli_error($conn));
 
 							if ($result->num_rows==1) {
-								$row = (array) mysqli_fetch_object($result);
-								$_SESSION['user']=$row;
-								$user_type_id=$row['user_type_id'];
+								$user = (array) mysqli_fetch_object($result);
+								unset($_SESSION['user']);
+								$_SESSION['user']=$user;
 								
-								// $_SESSION['user']=$row['name'];
 
-
-								 header('Location:'.redirectToHomePage ($user_type_id).'');
+								// SET PROFILE_ID AS A SESSION 
+								//  WHICH IS USED AT THE TIME OF COMPANY PROFILE UPDATION AND ADDITION
+								$sql1 = "SELECT id,name,address_id from company_profiles where user_id =".$_SESSION['user']['id'];
+								// // pr($sql1);
+								$query = mysqli_query($conn,$sql1) or die(mysqli_error($conn));
+								$company_profile = (array) mysqli_fetch_object($query);
+								unset($_SESSION['company_profile']);
+								$_SESSION['company_profile'] = $company_profile;
+								// pr($row1);
+								// pr($_SESSION);
+								header('Location:'.redirectToHomePage ($_SESSION['user']['user_type_id']));
 							} else {
 								echo 'Your username and password doesnot match';
 							}
-							// print_r($_SESSION);
 
 
 						}					    
 
 
 				    ?>		 	
- 
-
-
-
