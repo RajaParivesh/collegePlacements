@@ -26,7 +26,11 @@
 				
 					<?php 				 					
 						$data = mysqli_query($conn,"SELECT name,id FROM users_types") or die(mysqli_error($conn));
-						dropdown($data,'user_type_id');
+						// pr($data);
+						$attribute['name']='user_type_id';
+						$attribute['default']='';
+						// pr($attribute);
+						dropdown($data,$attribute);
 				    ?>		 	
 			</select><br><br>
 			<input type="submit" value="Sign Up"><br><br>

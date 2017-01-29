@@ -53,7 +53,7 @@
 
 								// SET PROFILE_ID AS A SESSION 
 								//  WHICH IS USED AT THE TIME OF COMPANY PROFILE UPDATION AND ADDITION
-								$sql1 = "SELECT id,name,address_id from company_profiles where user_id =".$_SESSION['user']['id'];
+								$sql1 = "SELECT id,company_id,address_id from company_profiles where user_id =".$_SESSION['user']['id'];
 								// // pr($sql1);
 								$query = mysqli_query($conn,$sql1) or die(mysqli_error($conn));
 								$company_profile = (array) mysqli_fetch_object($query);
@@ -65,9 +65,5 @@
 							} else {
 								echo 'Your username and password doesnot match';
 							}
-
-
 						}					    
-
-
 				    ?>		 	

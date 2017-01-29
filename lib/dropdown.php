@@ -1,5 +1,9 @@
-<?php function dropdown($data,$attribute) {
-		echo '<select name='.$attribute['name'].' value="" required >';
+<?php
+	//$data variable 
+	 function dropdown($data,$attribute) {
+
+	// print_r ($attribute);
+			echo '<select name="'.$attribute['name'].'" value="" required >';
 		echo'<option value="">---</option><br><br>';
 	while ($row = mysqli_fetch_object($data)) {
 			
@@ -16,6 +20,7 @@
 		}
 	echo '</select>';
 }
+
  ?>
 		
 

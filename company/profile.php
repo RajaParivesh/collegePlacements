@@ -7,9 +7,7 @@
     require ROOT.'includes/redirect_to_login.php';
   require ROOT.'includes/company_menu.php';
 ?>
-<?php
 
-?>    
 <?php   
 
  
